@@ -1,0 +1,232 @@
+/* Ensure the body takes full viewport height */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 99vh;
+    margin: 0;
+}
+
+/* Main content should take all available space */
+main {
+    flex: 1;
+}
+/* Header */
+header {
+    background: linear-gradient(135deg, #6a5acd, #00bcd4);
+    color: rgb(0, 119, 255);
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #004a9e;
+    color: white;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    min-height: auto;  /* Full height of the viewport */
+    background: linear-gradient(135deg, #bc82ff, hsl(214, 100%, 77%));
+    color: white;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in height calculation */
+    overflow: hidden; /* Remove scrollbar */
+}
+
+/* Home content */
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; /* Center text */
+    max-width: 100%; 
+    max-height: 99%;  
+     overflow: fixed; /* Ensure content does not overflow vertically */
+}
+
+/* Home content - Heading and Text */
+h1 {
+    font-size: 4em;
+    margin-bottom: +20px;
+}
+
+.info {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 0%; /*  Image */
+    object-fit: cover;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+/* Contact Icons */
+.contact-icons a {
+    margin: 0 10px;
+}
+
+.contact-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* Certificate Section */
+.certificate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between certificates */
+    margin-top: 20px;
+}
+
+.certificate a img {
+    width: 100px; /* Resize the certificate image */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -10px; /* Move the image a little to the left */
+}
+/* About Section */
+#about {
+    background: linear-gradient(135deg, #e0f7fa, #ffccf5);
+    color: #333;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
+}
+
+#about h1 {
+    font-style: bullet; 
+    font-size: 2.5em;
+    color: #6a5acd;
+    margin-top: -10px;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #004a9e;
+}
+/* About Section - Sub-items */
+#about ul {
+    list-style-type: disc; /* Add bullets */
+    padding-left: 20px; /* Indent bullets */
+    text-align: center; /* Align text to the left */
+}
+
+#about ul {
+    list-style: none;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#about ul li:hover {
+    color: #00bcd4;
+    cursor: pointer;
+}
+
+/* Projects Section */
+#projects {
+    background: linear-gradient(135deg, #ffccf5, #e0f7fa);
+    color: #333;
+    margin: 50px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#projects h1 {
+    font-size: 2.5em;
+    color: #6a5acd;
+    text-align: center;
+}
+
+#projects .project-item {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 6px;
+    background: #6a5acd;
+    color: white;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .home-content h1 {
+        font-size: 2.8em;
+    }
+
+    #about ul li {
+        font-size: 1.5em;
+    }
+
+    #projects h1 {
+        font-size: 2em;
+    }
+}
